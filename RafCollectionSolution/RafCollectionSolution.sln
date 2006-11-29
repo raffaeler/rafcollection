@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RafCollection", "RafCollection\RafCollection.csproj", "{9B0116EF-0355-4216-92A8-0B8FDEE69533}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBHelper", "DBHelper\DBHelper.csproj", "{3D3D92AD-8018-4CD1-A554-BD3727E7A20C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindBizLayer", "NorthwindBizLayer\NorthwindBizLayer.csproj", "{7CDB7F83-0BA4-44EE-9FB9-83C467E3EFBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindTest", "NorthwindTest\NorthwindTest.csproj", "{A8096A3C-CA14-4AEC-8292-2EDB5BBBEB6C}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs01.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DBHelper\\DBHelper.csproj
+		SccProjectName1 = DBHelper
+		SccLocalPath1 = DBHelper
+		SccProjectUniqueName2 = NorthwindBizLayer\\NorthwindBizLayer.csproj
+		SccProjectName2 = NorthwindBizLayer
+		SccLocalPath2 = NorthwindBizLayer
+		SccProjectUniqueName3 = NorthwindTest\\NorthwindTest.csproj
+		SccProjectName3 = NorthwindTest
+		SccLocalPath3 = NorthwindTest
+		SccProjectUniqueName4 = RafCollection\\RafCollection.csproj
+		SccProjectName4 = RafCollection
+		SccLocalPath4 = RafCollection
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B0116EF-0355-4216-92A8-0B8FDEE69533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0116EF-0355-4216-92A8-0B8FDEE69533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0116EF-0355-4216-92A8-0B8FDEE69533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0116EF-0355-4216-92A8-0B8FDEE69533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3D92AD-8018-4CD1-A554-BD3727E7A20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3D92AD-8018-4CD1-A554-BD3727E7A20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3D92AD-8018-4CD1-A554-BD3727E7A20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3D92AD-8018-4CD1-A554-BD3727E7A20C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CDB7F83-0BA4-44EE-9FB9-83C467E3EFBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CDB7F83-0BA4-44EE-9FB9-83C467E3EFBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CDB7F83-0BA4-44EE-9FB9-83C467E3EFBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CDB7F83-0BA4-44EE-9FB9-83C467E3EFBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8096A3C-CA14-4AEC-8292-2EDB5BBBEB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8096A3C-CA14-4AEC-8292-2EDB5BBBEB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8096A3C-CA14-4AEC-8292-2EDB5BBBEB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8096A3C-CA14-4AEC-8292-2EDB5BBBEB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
