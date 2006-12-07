@@ -26,7 +26,9 @@ namespace Vevy.Collections
 			remove { this.Events.RemoveHandler(EventDisposed, value); }
 		}
 
+#if !PocketPC
 		[Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+#endif
 		public virtual ISite Site
 		{
 			get { return this.site; }
@@ -43,7 +45,9 @@ namespace Vevy.Collections
 			}
 		}
 
+#if !PocketPC
 		[Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+#endif
 		public virtual bool DesignMode
 		{
 			get
@@ -55,7 +59,9 @@ namespace Vevy.Collections
 			}
 		}
 
+#if !PocketPC
 		[Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+#endif
 		public virtual IContainer Container
 		{
 			get

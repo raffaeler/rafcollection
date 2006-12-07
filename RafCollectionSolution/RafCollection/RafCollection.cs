@@ -9,7 +9,6 @@ using System;
 using System.ComponentModel;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 
 namespace Vevy.Collections
 {
@@ -116,19 +115,6 @@ namespace Vevy.Collections
 
 
 		#region Extra utility
-		/// <summary>
-		/// Verify if the collected type implements or not an interface
-		/// </summary>
-		/// <param name="InterfaceName">Collection type name</param>
-		/// <returns>true if it is implemented</returns>
-		internal static bool CollectedObjectImplementInterface(string InterfaceName)
-		{
-			Type t = typeof(T).GetInterface(InterfaceName);
-			if(t == null)
-				return false;
-			return true;
-		}
-
 		/// <summary>
 		/// Verify if T has a default (parameterless) constructor
 		/// If not, we cannot handle IBindingList.AddNew method

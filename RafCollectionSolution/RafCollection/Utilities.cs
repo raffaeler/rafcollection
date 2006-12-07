@@ -9,7 +9,6 @@ using System;
 using System.ComponentModel;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 
 // This is the DataSet types used to manage Row State, version and filter
 //
@@ -190,4 +189,31 @@ namespace Vevy.Collections
 
 	}
 
+
+
+	/// <summary>
+	/// An internal static class with common methods for both RafCollection and other classes
+	/// </summary>
+	internal static class CollectionUtilities
+	{
+		/// <summary>
+		/// Check a type to see if it implements an interface either implicitly or explicitly
+		/// The implementation doesn't use GetInterface method in order to be compilable
+		/// in the Compact Framework too
+		/// </summary>
+		/// <param name="TypeToEvaluate">Type to evaluate</param>
+		/// <param name="InterfaceName">Interface name</param>
+		/// <returns>true if the interface is implemented</returns>
+		internal static bool TypeImplementInterface(Type TypeToEvaluate, string InterfaceName)
+		{
+			Type[] types = TypeToEvaluate.GetInterfaces();
+			foreach(Type t in types)
+			{
+				if(t.Name.Equals(InterfaceName))
+					return true;
+			}
+			return false;
+		}
+
+	}
 }

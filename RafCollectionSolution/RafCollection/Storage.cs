@@ -20,7 +20,6 @@ using System;
 using System.ComponentModel;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 using System.Diagnostics;
 using System.Text;
 
@@ -153,10 +152,7 @@ namespace Vevy.Collections
 		{
 			get
 			{
-				Type t = typeof(T).GetInterface("INotifyPropertyChanged");
-				if(t == null)
-					return false;
-				return true;
+				return CollectionUtilities.TypeImplementInterface(typeof(T), "INotifyPropertyChanged");
 			}
 		}
 
@@ -167,10 +163,7 @@ namespace Vevy.Collections
 		{
 			get
 			{
-				Type t = typeof(T).GetInterface("INotifyPropertyChanging");
-				if(t == null)
-					return false;
-				return true;
+				return CollectionUtilities.TypeImplementInterface(typeof(T), "INotifyPropertyChanging");
 			}
 		}
 
@@ -178,10 +171,7 @@ namespace Vevy.Collections
 		{
 			get
 			{
-				Type t = typeof(T).GetInterface("ICloneable");
-				if(t == null)
-					return false;
-				return true;
+				return CollectionUtilities.TypeImplementInterface(typeof(T), "ICloneable");
 			}
 		}
 		#endregion

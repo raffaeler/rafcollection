@@ -78,8 +78,8 @@ namespace Vevy.Collections
 			if(SortString == null || SortString.Length == 0)
 			{
 				// sort using IComparable or IComparable<T> in T
-				if(RafCollection<T>.CollectedObjectImplementInterface("IComparable") ||
-					RafCollection<T>.CollectedObjectImplementInterface("IComparable<>"))
+				if(CollectionUtilities.TypeImplementInterface(typeof(T), "IComparable") ||
+					CollectionUtilities.TypeImplementInterface(typeof(T), "IComparable<>"))
 				{
 					this.Sort(new StandardComparison());
 					_IsSorted = true;

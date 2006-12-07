@@ -8,13 +8,17 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+#if !PocketPC
 using System.Runtime.Serialization;
+#endif
 using System.ComponentModel;
 
 namespace Vevy.Collections
 {
 	public partial class RafCollection<T>
 	{
+
+#if !PocketPC
 		/// <summary>
 		/// Event that occurs before serializing
 		/// </summary>
@@ -41,6 +45,7 @@ namespace Vevy.Collections
 				}
 			}
 		}
+#endif
 
 
 		#region Notifiche di add / remove
@@ -58,7 +63,7 @@ namespace Vevy.Collections
 				Item.SaveClone(true);
 			}
 
-            ////if(RafCollection<T>.CollectedObjectImplementInterface("INotifyPropertyChanged"))
+			////if(CollectionUtilities.TypeImplementInterface(typeof(T), "INotifyPropertyChanged"))
 			//if(Item.CollectedObject is INotifyPropertyChanged)
 			//{
 			//	Item.PropertyChanged += _PropertyChangedEventHandler;
@@ -86,7 +91,7 @@ namespace Vevy.Collections
 				//Item.AcceptChanges();
 			}
 
-            ////if(RafCollection<T>.CollectedObjectImplementInterface("INotifyPropertyChanged"))
+			////if(CollectionUtilities.TypeImplementInterface(typeof(T), "INotifyPropertyChanged"))
 			//if(Item.CollectedObject is INotifyPropertyChanged)
 			//{
 			//    Item.PropertyChanged -= _PropertyChangedEventHandler;
@@ -107,7 +112,7 @@ namespace Vevy.Collections
 		/// </summary>
 		private bool RaisesItemChangedEvents
 		{
-			get { return RafCollection<T>.CollectedObjectImplementInterface("INotifyPropertyChanged"); }
+			get { return CollectionUtilities.TypeImplementInterface(typeof(T), "INotifyPropertyChanged"); }
 		}
 
 		/// <summary>
@@ -115,7 +120,7 @@ namespace Vevy.Collections
 		/// </summary>
 		private bool SupportsChangeNotification
 		{
-			get { return RafCollection<T>.CollectedObjectImplementInterface("INotifyPropertyChanged"); }
+			get { return CollectionUtilities.TypeImplementInterface(typeof(T), "INotifyPropertyChanged"); }
 		}
 
 		/// <summary>

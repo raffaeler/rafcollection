@@ -84,7 +84,7 @@ namespace Vevy.Collections
 		/// <returns>Created item</returns>
 		private T CreateT()
 		{
-			T NewObject = (T)TypeDescriptor.CreateInstance(null, typeof(T), null, null);
+			T NewObject = (T)Activator.CreateInstance(typeof(T));
 			return NewObject;
 		}
 

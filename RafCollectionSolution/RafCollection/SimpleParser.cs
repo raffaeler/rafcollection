@@ -264,7 +264,7 @@ namespace Vevy.Collections
 				if(!(val is IComparable))
 					return false;
 
-				object ConvertedValue = Convert.ChangeType(Value, pi.PropertyType);
+				object ConvertedValue = Convert.ChangeType(Value, pi.PropertyType, null);
 
 				int Result = ((IComparable)val).CompareTo(ConvertedValue);
 				switch(Result)

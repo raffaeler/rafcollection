@@ -9,9 +9,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using System.IO;
+#if !PocketPC
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+#endif
+using System.IO;
 using System.Diagnostics;
 using System.ComponentModel;
 
@@ -30,6 +32,9 @@ namespace Vevy.Collections
 		/// <returns>cloned object</returns>
 		public static object SerializeClone(object o)
 		{
+#if PocketPC
+			return null;
+#else
 			IFormatter formatter = new BinaryFormatter();
 			using(Stream stream = new MemoryStream())
 			{
@@ -50,6 +55,7 @@ namespace Vevy.Collections
 					throw;
 				}
 			}
+#endif
 		}
 
 

@@ -46,11 +46,11 @@ namespace Vevy.Collections
 						string Prop = Props[i].Trim();
 						PropertyDescriptor pd = pdc.Find(Prop, true);
 						if(pd == null)
-							sb.AppendFormat("{0}=[Invalid Property]", Prop);
+							sb.AppendFormat(null, "{0}=[Invalid Property]", Prop);
 						else
 						{
 							object PropValue = pd.GetValue(obj);
-							sb.AppendFormat("{0}={1}", Prop, PropValue);
+							sb.AppendFormat(null, "{0}={1}", Prop, PropValue);
 						}
 						if(i != Props.Length - 1)
 							sb.Append(", ");
@@ -60,7 +60,7 @@ namespace Vevy.Collections
 				{
 					if(Props[0].Length != 0)
 						sb.Append(" ");
-					sb.AppendFormat("[{0}]", Postfix);
+					sb.AppendFormat(null, "[{0}]", Postfix);
 				}
 				if(Props.Length > 1)
 					sb.Append(")");
@@ -123,7 +123,7 @@ namespace Vevy.Collections
 			System.Text.StringBuilder sb = new System.Text.StringBuilder();
 			sb.Append("{");
 			if(Properties == null || Properties.Length == 0)
-				sb.AppendFormat("Count={0}", this.Count);
+				sb.AppendFormat(null, "Count={0}", this.Count);
 			bool bFirstElement = true;
 			for(int i = 0; i < _ArrayCount; i++)
 			{
@@ -136,15 +136,15 @@ namespace Vevy.Collections
 					if(Properties == null || Properties.Length == 0)
 						sb.Append(": ");
 					bFirstElement = false;
-					sb.AppendFormat("{0}", GetValuesForProperties(Properties, Elem.Storage.CollectedObject, DumpState ? MapStateSymbol(Elem.Storage.Status) : string.Empty));
+					sb.AppendFormat(null, "{0}", GetValuesForProperties(Properties, Elem.Storage.CollectedObject, DumpState ? MapStateSymbol(Elem.Storage.Status) : string.Empty));
 				}
 				else
 				{
-					sb.AppendFormat(", {0}", GetValuesForProperties(Properties, Elem.Storage.CollectedObject, DumpState ? MapStateSymbol(Elem.Storage.Status) : string.Empty));
+					sb.AppendFormat(null, ", {0}", GetValuesForProperties(Properties, Elem.Storage.CollectedObject, DumpState ? MapStateSymbol(Elem.Storage.Status) : string.Empty));
 				}
 				if(MaxObjects != -1 && i == MaxObjects)
 				{
-					sb.AppendFormat(", ...");
+					sb.Append(", ...");
 					break;
 				}
 			}
