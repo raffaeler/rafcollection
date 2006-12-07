@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindBizLayer", "Northw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindTest", "NorthwindTest\NorthwindTest.csproj", "{A8096A3C-CA14-4AEC-8292-2EDB5BBBEB6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RafCollection_PPC2003", "RafCollection_PPC2003\RafCollection_PPC2003.csproj", "{C0CF7ABB-703D-477E-93A4-71F7BC2A9CFE}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
 		SccNumberOfProjects = 5
@@ -49,6 +51,10 @@ Global
 		{A8096A3C-CA14-4AEC-8292-2EDB5BBBEB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8096A3C-CA14-4AEC-8292-2EDB5BBBEB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8096A3C-CA14-4AEC-8292-2EDB5BBBEB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0CF7ABB-703D-477E-93A4-71F7BC2A9CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0CF7ABB-703D-477E-93A4-71F7BC2A9CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0CF7ABB-703D-477E-93A4-71F7BC2A9CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0CF7ABB-703D-477E-93A4-71F7BC2A9CFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
