@@ -66,33 +66,42 @@
     </Compile>
     <Compile Include="..\RafCollection\RafCollection.Changes.cs">
       <Link>RafCollection.Changes.cs</Link>
+      <DependentUpon>RafCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="..\RafCollection\RafCollection.cs">
       <Link>RafCollection.cs</Link>
     </Compile>
     <Compile Include="..\RafCollection\RafCollection.ExplicitInterface.cs">
       <Link>RafCollection.ExplicitInterface.cs</Link>
+      <DependentUpon>RafCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="..\RafCollection\RafCollection.Filter.cs">
       <Link>RafCollection.Filter.cs</Link>
+      <DependentUpon>RafCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="..\RafCollection\RafCollection.Find.cs">
       <Link>RafCollection.Find.cs</Link>
+      <DependentUpon>RafCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="..\RafCollection\RafCollection.IndexCount.cs">
       <Link>RafCollection.IndexCount.cs</Link>
+      <DependentUpon>RafCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="..\RafCollection\RafCollection.Notifications.cs">
       <Link>RafCollection.Notifications.cs</Link>
+      <DependentUpon>RafCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="..\RafCollection\RafCollection.Remove.cs">
       <Link>RafCollection.Remove.cs</Link>
+      <DependentUpon>RafCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="..\RafCollection\RafCollection.Sort.cs">
       <Link>RafCollection.Sort.cs</Link>
+      <DependentUpon>RafCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="..\RafCollection\RafCollection.ToString.cs">
       <Link>RafCollection.ToString.cs</Link>
+      <DependentUpon>RafCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="..\RafCollection\SimpleParser.cs">
       <Link>SimpleParser.cs</Link>
