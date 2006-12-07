@@ -33,7 +33,7 @@ namespace Vevy.Collections
 		public static object SerializeClone(object o)
 		{
 #if PocketPC
-			return null;
+			return ReflectionClone(o);
 #else
 			IFormatter formatter = new BinaryFormatter();
 			using(Stream stream = new MemoryStream())
@@ -56,6 +56,39 @@ namespace Vevy.Collections
 				}
 			}
 #endif
+		}
+
+		/// <summary>
+		/// Makes a shallow copy of an object by copying all the get properties
+		/// of the source object to the set properties of the target object
+		/// 
+		/// As a general purpose method, not all the object can be cloned this way.
+		/// If getter and setter are 'asymmetric' this system doesn't work
+		/// </summary>
+		/// <param name="o">object to clone</param>
+		/// <returns>cloned object</returns>
+		public static object ReflectionClone(object o)
+		{
+			if(o == null)
+				throw new ArgumentNullException();
+			PropertyDescriptorCollection pdc = TypeDescriptor.GetProperties(o);
+			object NewObject = Activator.CreateInstance(o.GetType());
+			foreach(PropertyDescriptor pd in pdc)
+			{
+				if(pd.ShouldSerializeValue(o) && !pd.IsReadOnly)
+				{
+					try
+					{
+						object val = pd.GetValue(o);
+						pd.SetValue(NewObject, val);
+					}
+					catch(Exception)
+					{
+						Debug.WriteLine("ReflectionClone property failure on " + pd.Name);
+					}
+				}
+			}
+			return NewObject;
 		}
 
 
