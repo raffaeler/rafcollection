@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RafCollection_PPC2003")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("RafCollection for PocketPC 2003")]
+[assembly: AssemblyDescription("Generic collection with full binding, sort, find and filter support")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Vevy Europe S.p.A.")]
-[assembly: AssemblyProduct("RafCollection_PPC2003")]
-[assembly: AssemblyCopyright("Copyright © Vevy Europe S.p.A. 2006")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyProduct("RafCollection for PocketPC 2003")]
+[assembly: AssemblyCopyright("Copyright © Raffaele Rialdi 2006")]
+[assembly: AssemblyTrademark("RafCollection")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("2.0.0.135")]
 
