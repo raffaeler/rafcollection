@@ -1,0 +1,119 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0CF7ABB-703D-477E-93A4-71F7BC2A9CFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vevy.Collections</RootNamespace>
+    <AssemblyName>RafCollection_PPC2003</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>3C41C503-53EF-4c2a-8DD4-A8217CAD115E</PlatformID>
+    <OSVersion>4.20</OSVersion>
+    <DeployDirSuffix>RafCollection_PPC2003</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\RafCollection\Box.cs">
+      <Link>Box.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\EntityHelper.cs">
+      <Link>EntityHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.AddInsert.cs">
+      <Link>RafCollection.AddInsert.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.Changes.cs">
+      <Link>RafCollection.Changes.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.cs">
+      <Link>RafCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.ExplicitInterface.cs">
+      <Link>RafCollection.ExplicitInterface.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.Filter.cs">
+      <Link>RafCollection.Filter.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.Find.cs">
+      <Link>RafCollection.Find.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.IndexCount.cs">
+      <Link>RafCollection.IndexCount.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.Notifications.cs">
+      <Link>RafCollection.Notifications.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.Remove.cs">
+      <Link>RafCollection.Remove.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.Sort.cs">
+      <Link>RafCollection.Sort.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\RafCollection.ToString.cs">
+      <Link>RafCollection.ToString.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\SimpleParser.cs">
+      <Link>SimpleParser.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\Storage.cs">
+      <Link>Storage.cs</Link>
+    </Compile>
+    <Compile Include="..\RafCollection\Utilities.cs">
+      <Link>Utilities.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
