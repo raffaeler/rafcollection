@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RafCollection_PPC2003", "Ra
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
+		SccNumberOfProjects = 6
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs01.codeplex.com/
 		SccLocalPath0 = .
@@ -29,6 +29,9 @@ Global
 		SccProjectUniqueName4 = RafCollection\\RafCollection.csproj
 		SccProjectName4 = RafCollection
 		SccLocalPath4 = RafCollection
+		SccProjectUniqueName5 = RafCollection_PPC2003\\RafCollection_PPC2003.csproj
+		SccProjectName5 = RafCollection_PPC2003
+		SccLocalPath5 = RafCollection_PPC2003
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

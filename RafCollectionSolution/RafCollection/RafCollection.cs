@@ -36,6 +36,7 @@ namespace Vevy.Collections
 		#region Stato della collection
 		private ObjectStateFilter _StateFilter;
 		private string _Filter;
+		private CustomChoiceDelegate<T> _CustomFilter;
 		private int _InvisibleCount;
 
 		// every time I return T, I mantain Storage<T> cached here for performance reasons.
