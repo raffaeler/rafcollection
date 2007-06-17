@@ -127,5 +127,24 @@ namespace NorthwindTest
 				}				
 			}
 		}
+
+		private void btSerializeTest_Click(object sender, EventArgs e)
+		{
+			OrderCollection Orders = orderCollectionBindingSource.DataSource as OrderCollection;
+			if(Orders == null)
+				return;
+			try
+			{
+				SerializeHelper.Serialize(Orders, "SerializeText.bin");
+				OrderCollection OrdersClone = SerializeHelper.Deserialize("SerializeText.bin") as OrderCollection;
+			}
+			catch(Exception err)
+			{
+				MessageBox.Show(err.ToString());
+				return;
+			}
+			MessageBox.Show("Test Ok");
+
+		}
 	}
 }

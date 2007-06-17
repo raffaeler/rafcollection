@@ -114,6 +114,7 @@ namespace NorthwindTest
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.lblCustom = new System.Windows.Forms.ToolStripLabel();
 			this.tsbAssertTests = new System.Windows.Forms.ToolStripButton();
+			this.btSerializeTest = new System.Windows.Forms.ToolStripButton();
 			shipCityLabel = new System.Windows.Forms.Label();
 			shipAddressLabel = new System.Windows.Forms.Label();
 			shipNameLabel = new System.Windows.Forms.Label();
@@ -823,10 +824,11 @@ namespace NorthwindTest
             this.lblDataSet,
             this.toolStripSeparator3,
             this.lblCustom,
-            this.tsbAssertTests});
+            this.tsbAssertTests,
+            this.btSerializeTest});
 			this.tsTests.Location = new System.Drawing.Point(3, 25);
 			this.tsTests.Name = "tsTests";
-			this.tsTests.Size = new System.Drawing.Size(357, 25);
+			this.tsTests.Size = new System.Drawing.Size(459, 25);
 			this.tsTests.TabIndex = 1;
 			// 
 			// tsbMemTestDataSet
@@ -883,6 +885,16 @@ namespace NorthwindTest
 			this.tsbAssertTests.Size = new System.Drawing.Size(71, 22);
 			this.tsbAssertTests.Text = "Assert Tests";
 			this.tsbAssertTests.Click += new System.EventHandler(this.tsbAssertTests_Click);
+			// 
+			// btSerializeTest
+			// 
+			this.btSerializeTest.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.btSerializeTest.Image = ((System.Drawing.Image)(resources.GetObject("btSerializeTest.Image")));
+			this.btSerializeTest.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btSerializeTest.Name = "btSerializeTest";
+			this.btSerializeTest.Size = new System.Drawing.Size(71, 22);
+			this.btSerializeTest.Text = "SerializeTest";
+			this.btSerializeTest.Click += new System.EventHandler(this.btSerializeTest_Click);
 			// 
 			// Form1
 			// 
@@ -987,6 +999,7 @@ namespace NorthwindTest
 		private System.Windows.Forms.DataGridViewTextBoxColumn regionDataGridViewTextBoxColumn;
 		private System.Windows.Forms.BindingSource customersBindingSource;
 		private System.Windows.Forms.ToolStripButton tsbAssertTests;
+		private System.Windows.Forms.ToolStripButton btSerializeTest;
 	}
 }
 

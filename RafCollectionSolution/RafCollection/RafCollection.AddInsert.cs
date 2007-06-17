@@ -32,7 +32,7 @@ namespace Vevy.Collections
 			RecalcFilter(false);
 			if(!IsVisible(Element))
 				_InvisibleCount++;
-			int NewIndex = _ArrayCount - 1;
+			int NewIndex = _ArrayCount -_InvisibleCount - 1;		// patched "-InvisibleCount" on June 17, 2007
 			OnListChanged(new ListChangedEventArgs(ListChangedType.ItemAdded, NewIndex));
 
 			OnAfterAdd(Element.Storage);

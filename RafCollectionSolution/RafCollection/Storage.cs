@@ -177,6 +177,7 @@ namespace Vevy.Collections
 		#endregion
 
 		#region INotifyPropertyChanged Members
+		[NonSerialized]
 		private PropertyChangedEventHandler _PropertyChanged;
 		public event PropertyChangedEventHandler PropertyChanged
 		{

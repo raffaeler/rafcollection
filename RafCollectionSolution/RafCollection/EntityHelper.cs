@@ -128,6 +128,7 @@ namespace Vevy.Collections
 					}
 				}
 			}
+			Clone = null;
 		}
 
 		/// <summary>
