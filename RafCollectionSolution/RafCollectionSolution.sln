@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindTest", "NorthwindT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RafCollection_PPC2003", "RafCollection_PPC2003\RafCollection_PPC2003.csproj", "{C0CF7ABB-703D-477E-93A4-71F7BC2A9CFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestV2RafCollection", "TestV2RafCollection\TestV2RafCollection.csproj", "{E4B60887-758C-400A-AD9E-F376515A8745}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A7C7340D-7162-4DBE-A1EF-E07119FF9B5F}"
 	ProjectSection(SolutionItems) = preProject
 		localtestrun.testrunconfig = localtestrun.testrunconfig
@@ -21,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
+		SccNumberOfProjects = 6
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs01.codeplex.com/
 		SccLocalPath0 = .
@@ -40,9 +38,6 @@ Global
 		SccProjectUniqueName5 = RafCollection_PPC2003\\RafCollection_PPC2003.csproj
 		SccProjectName5 = RafCollection_PPC2003
 		SccLocalPath5 = RafCollection_PPC2003
-		SccProjectUniqueName6 = TestV2RafCollection\\TestV2RafCollection.csproj
-		SccProjectName6 = TestV2RafCollection
-		SccLocalPath6 = TestV2RafCollection
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = RafCollectionSolution.vsmdi
@@ -72,10 +67,6 @@ Global
 		{C0CF7ABB-703D-477E-93A4-71F7BC2A9CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0CF7ABB-703D-477E-93A4-71F7BC2A9CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0CF7ABB-703D-477E-93A4-71F7BC2A9CFE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E4B60887-758C-400A-AD9E-F376515A8745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4B60887-758C-400A-AD9E-F376515A8745}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4B60887-758C-400A-AD9E-F376515A8745}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4B60887-758C-400A-AD9E-F376515A8745}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
