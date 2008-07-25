@@ -123,8 +123,16 @@ namespace Vevy.Collections
 		{
 			if(_CollectedObject is IEditableObject)
 				((IEditableObject)_CollectedObject).CancelEdit();
+
 			if(object.Equals(_Clone, default(T)))
+			{
+				if(Status == ObjectStatusType.Deleted)
+				{
+					_Status = ObjectStatusType.Normal;
+					_PropertyChanged(this, new PropertyChangedEventArgs(""));
+				}
 				return;
+			}
 			_CollectedObject = _Clone;
 			if(_CollectedObject is INotifyPropertyChanged)	// INotifyPropertyChanging
 				_Clone = default(T);

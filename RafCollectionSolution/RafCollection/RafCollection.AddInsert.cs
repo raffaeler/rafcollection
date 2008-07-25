@@ -136,6 +136,8 @@ namespace Vevy.Collections
 		/// <param name="itemIndex">Index of the element to commit</param>
 		private void EndNew(int itemIndex)	// ICancelAddNew
 		{
+			if(itemIndex < 0)
+				return;
 			T Item = this[itemIndex];
 			if(GetObjectStatus(Item) == ObjectStatusType.PendingAdded)
 			{

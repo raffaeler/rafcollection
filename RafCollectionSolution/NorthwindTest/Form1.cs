@@ -31,6 +31,35 @@ namespace NorthwindTest
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			OrderCollection Orders = _Dal.GetAllOrders();
+			int count = Orders.Count;
+			for(int i = 10; i < count; i++)
+				Orders.RemoveAt(10);
+			Orders.AcceptChanges();
+			Console.WriteLine(Orders.HasChanges);
+		//	Orders.StateFilter = ObjectStateFilter.CurrentAll;
+
+			Console.WriteLine(Orders.ToString(true));
+			Orders.RemoveAt(3);
+			Orders.RemoveAt(4);
+			Console.WriteLine(Orders.ToString(true));
+			Orders.RejectChanges();
+			Console.WriteLine(Orders.ToString(true));
+
+
+/*
+OrderCollection Orders = _Dal.GetAllOrders();
+if (Orders.Count == 0) return;
+Order order = Orders[0];
+Customer customer = new Customer();
+order.Customers.Add(customer);
+System.Diagnostics.Debug.WriteLine("before rejectchanges order.Customers.Count " + order.Customers.Count);
+Orders.RejectChanges();
+System.Diagnostics.Debug.WriteLine("after rejectchanges order.Customers.Count " + Orders[0].Customers.Count);
+
+//Before the RejectChanges the order.Customers.Count = 1
+//After the RejectChanges the order.Customers.Count = 1 
+*/
 		}
 
 		private void tsbLoad_Click(object sender, EventArgs e)
