@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Vevy Europe S.p.A.")]
 [assembly: AssemblyProduct("RafCollection for PocketPC 2003")]
-[assembly: AssemblyCopyright("Copyright © Raffaele Rialdi 2006")]
+[assembly: AssemblyCopyright("Copyright © Raffaele Rialdi 2006-2008")]
 [assembly: AssemblyTrademark("RafCollection")]
 [assembly: AssemblyCulture("")]
 
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("2.0.0.135")]
+[assembly: AssemblyVersion("2.2.0.180")]
 
