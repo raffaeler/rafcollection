@@ -267,6 +267,17 @@ namespace Vevy.Collections
 		/// <param name="arrayIndex">Array index to start the copy</param>
 		public void CopyTo(T[] array, int arrayIndex)
 		{
+			this.CopyToInternal(array, arrayIndex);
+		}
+
+		/// <summary>
+		/// TODO: unit testing needed here
+		/// Copy in an array items of type object
+		/// </summary>
+		/// <param name="array">Array in which to copy the elements</param>
+		/// <param name="arrayIndex">Array index to start the copy</param>
+		private void CopyToInternal(IList array, int arrayIndex)
+		{
 			if(array == null)
 				throw new ArgumentNullException();
 

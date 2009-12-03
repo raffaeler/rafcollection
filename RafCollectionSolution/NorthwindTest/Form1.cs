@@ -29,8 +29,37 @@ namespace NorthwindTest
 			_Dal = new DataLayer(Properties.Settings.Default.NorthwindConnectionString);
 		}
 
+		private OrderCollection LoadAll()
+		{
+			OrderCollection Orders = _Dal.GetAllOrders();
+			foreach(Order order in Orders)
+			{
+				CustomerCollection customers = _Dal.GetCustomerByCustomerId(order.CustomerID);
+				if(customers.Count > 0)
+					order.Customer = customers[0];
+
+				OrderDetailCollection details = _Dal.GetOrderDetailsByOrderId(order.OrderID);
+				foreach(OrderDetail detail in details)
+				{
+					order.OrderDetails.Add(detail);
+
+					ProductCollection products = _Dal.GetProductByProductId(detail.ProductID);
+					if(products.Count > 0)
+						detail.Product = products[0];
+				}
+			}
+			return Orders;
+		}
+
+
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			//OrderCollection AllOrders = LoadAll();
+			//SerializeHelper.Serialize(AllOrders, "AllOrders.bin");
+			//CustomerCollection AllCustomers = _Dal.GetAllCustomers();
+			//SerializeHelper.Serialize(AllCustomers, "AllCustomers.bin");
+
+
 			OrderCollection Orders = _Dal.GetAllOrders();
 			int count = Orders.Count;
 			for(int i = 10; i < count; i++)

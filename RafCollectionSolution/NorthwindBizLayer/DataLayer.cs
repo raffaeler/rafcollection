@@ -88,6 +88,20 @@ namespace NorthwindBizLayer
 			return cc;
 		}
 
+		public CustomerCollection GetCustomerByCustomerId(string CustomerId)
+		{
+			string str = @"select CustomerID, CompanyName, ContactName, ContactTitle, Address, City,
+				Region, PostalCode, Country, Phone, Fax from Customers where CustomerID = @CustomerId";
+			SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
+			cmd.Parameters.Add("@CustomerId", SqlDbType.NChar, 0, "CustomerId");
+			cmd.Parameters[0].Value = CustomerId;
+
+			CustomerCollection cc = new CustomerCollection();
+			DataRead.RunQuery(cmd, new DataRead.ProcessRow(CustomerProc), cc);
+			cc.AcceptChanges();
+			return cc;
+		}
+
 		public OrderDetailCollection GetAllOrderDetails()
 		{
 			string str = @"select OrderID, ProductID, UnitPrice, Quantity, Discount

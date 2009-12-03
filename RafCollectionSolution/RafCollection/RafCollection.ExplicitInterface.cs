@@ -175,7 +175,7 @@ namespace Vevy.Collections
 		}
 		void ICollection.CopyTo(Array array, int index)
 		{
-			this.CopyTo((T[])array, index);
+			this.CopyToInternal(array, index);
 		}
 		#endregion
 

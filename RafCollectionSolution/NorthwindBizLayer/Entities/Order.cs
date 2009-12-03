@@ -48,12 +48,13 @@ namespace NorthwindBizLayer.Entities
 		private string _ShipRegion;
 		private string _ShipPostalCode;
 		private string _ShipCountry;
+		private Customer _Customer;
 
-		//private OrderDetailCollection _OrderDetails;
-		//public OrderDetailCollection OrderDetails
-		//{
-		//    get { return _OrderDetails; }
-		//}
+		private OrderDetailCollection _OrderDetails;
+		public OrderDetailCollection OrderDetails
+		{
+			get { return _OrderDetails; }
+		}
 
 		private CustomerCollection _Customers;
 		public CustomerCollection Customers
@@ -74,16 +75,16 @@ namespace NorthwindBizLayer.Entities
 		{
 		    _Customers = new CustomerCollection();
 		//    _Employees = new EmployeeCollection();
-		//    _OrderDetails = new OrderDetailCollection();
+		    _OrderDetails = new OrderDetailCollection();
 		}
 		/// <summary>
 		/// 
 		/// <summary>
-		internal Order(CustomerCollection customers/*, EmployeeCollection employees, OrderDetailCollection details*/)
+		internal Order(CustomerCollection customers/*, EmployeeCollection employees*/, OrderDetailCollection details)
 		{
 		    _Customers = customers;
 		//    _Employees = employees;
-		//    _OrderDetails = details;
+		    _OrderDetails = details;
 		}
 
 		#region Accessor properties con INotifyPropertyChanged prima e dopo
@@ -157,6 +158,13 @@ namespace NorthwindBizLayer.Entities
 			get { return _ShipCountry; }
 			set { OnDataChanged(null); _ShipCountry = value; OnDataChanged("ShipCountry"); }
 		}
+
+		public Customer Customer
+		{
+			get { return _Customer; }
+			set { _Customer = value; }
+		}
+
 		#endregion
 
 		#region INotifyPropertyChanged Members
@@ -196,7 +204,7 @@ namespace NorthwindBizLayer.Entities
 		/// <returns>Cloned object</returns>
 		public object Clone()
 		{
-			Order order = new Order(_Customers/*, _Employees, _OrderDetails*/);
+			Order order = new Order(_Customers/*, _Employees*/, _OrderDetails);
 			order.OrderID = OrderID;
 			order.CustomerID = CustomerID;
 			order.EmployeeID = EmployeeID;
@@ -211,6 +219,7 @@ namespace NorthwindBizLayer.Entities
 			order.ShipRegion = ShipRegion;
 			order.ShipPostalCode = ShipPostalCode;
 			order.ShipCountry = ShipCountry;
+			order.Customer = Customer;
 			return order;
 		}
 

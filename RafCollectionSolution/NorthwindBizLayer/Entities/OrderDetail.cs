@@ -24,6 +24,7 @@ namespace NorthwindBizLayer.Entities
 		private decimal _UnitPrice;
 		private int _Quantity;
 		private decimal _Discount;
+		private Product _Product;
 
 		public OrderDetail()
 		{
@@ -58,6 +59,12 @@ namespace NorthwindBizLayer.Entities
 		{
 			get { return _Discount; }
 			set { OnDataChanged(null); _Discount = value; OnDataChanged("Discount"); }
+		}
+
+		public Product Product
+		{
+			get {return _Product;}
+			set { _Product = value; }
 		}
 
 		#endregion
@@ -105,6 +112,7 @@ namespace NorthwindBizLayer.Entities
 			item.UnitPrice = UnitPrice;
 			item.Quantity = Quantity;
 			item.Discount = Discount;
+			item.Product = Product;
 			return item;
 		}
 
