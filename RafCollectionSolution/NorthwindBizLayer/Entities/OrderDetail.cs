@@ -20,7 +20,7 @@ namespace NorthwindBizLayer.Entities
 	public class OrderDetail : INotifyPropertyChanged, IEditableObject, ICloneable
 	{
 		private int _OrderID;
-		private string _ProductID;
+		private int _ProductID;
 		private decimal _UnitPrice;
 		private int _Quantity;
 		private decimal _Discount;
@@ -36,7 +36,7 @@ namespace NorthwindBizLayer.Entities
 			set { OnDataChanged(null); _OrderID = value; OnDataChanged("OrderID"); }
 		}
 
-		public string ProductID
+		public int ProductID
 		{
 			get { return _ProductID; }
 			set { OnDataChanged(null); _ProductID = value; OnDataChanged("ProductID"); }
