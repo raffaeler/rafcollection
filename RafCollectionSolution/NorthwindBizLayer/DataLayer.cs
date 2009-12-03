@@ -46,12 +46,12 @@ namespace NorthwindBizLayer
 		//    coll.Add(item);
 		//}
 
-		//internal static void OrderDetailProc(IDataReader dr, FieldDictionary Fields, object Param)
-		//{
-		//    OrderDetailCollection coll = Param as OrderDetailCollection;
-		//    OrderDetail item = Mapper.ReadOrderDetail(dr, Fields);
-		//    coll.Add(item);
-		//}
+		internal static void OrderDetailProc(IDataReader dr, FieldDictionary Fields, object Param)
+		{
+			OrderDetailCollection coll = Param as OrderDetailCollection;
+			OrderDetail item = Mapper.ReadOrderDetail(dr, Fields);
+			coll.Add(item);
+		}
 
 		internal static void OrderProc(IDataReader dr, FieldDictionary Fields, object Param)
 		{
@@ -60,12 +60,12 @@ namespace NorthwindBizLayer
 			coll.Add(item);
 		}
 
-		//internal static void ProductProc(IDataReader dr, FieldDictionary Fields, object Param)
-		//{
-		//    ProductCollection coll = Param as ProductCollection;
-		//    Product item = Mapper.ReadProduct(dr, Fields);
-		//    coll.Add(item);
-		//}
+		internal static void ProductProc(IDataReader dr, FieldDictionary Fields, object Param)
+		{
+			ProductCollection coll = Param as ProductCollection;
+			Product item = Mapper.ReadProduct(dr, Fields);
+			coll.Add(item);
+		}
 
 		//internal static void SupplierProc(IDataReader dr, FieldDictionary Fields, object Param)
 		//{
@@ -76,43 +76,43 @@ namespace NorthwindBizLayer
 
 
 
-//        public CustomerCollection GetAllCustomers()
-//        {
-//            string str = @"select CustomerID, CompanyName, ContactName, ContactTitle, Address, City,
-//				Region, PostalCode, Country, Phone, Fax from Customers";
-//            SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
+		public CustomerCollection GetAllCustomers()
+		{
+			string str = @"select CustomerID, CompanyName, ContactName, ContactTitle, Address, City,
+				Region, PostalCode, Country, Phone, Fax from Customers";
+			SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
 
-//            CustomerCollection cc = new CustomerCollection();
-//            DataRead.RunQuery(cmd, new DataRead.ProcessRow(CustomerProc), cc);
-//            cc.AcceptChanges();
-//            return cc;
-//        }
+			CustomerCollection cc = new CustomerCollection();
+			DataRead.RunQuery(cmd, new DataRead.ProcessRow(CustomerProc), cc);
+			cc.AcceptChanges();
+			return cc;
+		}
 
-//        public OrderDetailCollection GetAllOrderDetails()
-//        {
-//            string str = @"select OrderID, ProductID, UnitPrice, Quantity, Discount
-//							from [Order Details]";
-//            SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
+		public OrderDetailCollection GetAllOrderDetails()
+		{
+			string str = @"select OrderID, ProductID, UnitPrice, Quantity, Discount
+							from [Order Details]";
+			SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
 
-//            OrderDetailCollection cc = new OrderDetailCollection();
-//            DataRead.RunQuery(cmd, new DataRead.ProcessRow(OrderDetailProc), cc);
-//            cc.AcceptChanges();
-//            return cc;
-//        }
+			OrderDetailCollection cc = new OrderDetailCollection();
+			DataRead.RunQuery(cmd, new DataRead.ProcessRow(OrderDetailProc), cc);
+			cc.AcceptChanges();
+			return cc;
+		}
 
-//        public OrderDetailCollection GetOrderDetailsByOrderId(int OrderId)
-//        {
-//            string str = @"select OrderID, ProductID, UnitPrice, Quantity, Discount
-//							from [Order Details] where OrderId = @OrderId";
-//            SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
-//            cmd.Parameters.Add("@OrderId", SqlDbType.Int, 0, "OrderId");
-//            cmd.Parameters[0].Value = OrderId;
+		public OrderDetailCollection GetOrderDetailsByOrderId(int OrderId)
+		{
+			string str = @"select OrderID, ProductID, UnitPrice, Quantity, Discount
+							from [Order Details] where OrderId = @OrderId";
+			SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
+			cmd.Parameters.Add("@OrderId", SqlDbType.Int, 0, "OrderId");
+			cmd.Parameters[0].Value = OrderId;
 
-//            OrderDetailCollection cc = new OrderDetailCollection();
-//            DataRead.RunQuery(cmd, new DataRead.ProcessRow(OrderDetailProc), cc);
-//            cc.AcceptChanges();
-//            return cc;
-//        }
+			OrderDetailCollection cc = new OrderDetailCollection();
+			DataRead.RunQuery(cmd, new DataRead.ProcessRow(OrderDetailProc), cc);
+			cc.AcceptChanges();
+			return cc;
+		}
 
 
 		public OrderCollection GetAllOrders()
@@ -129,35 +129,35 @@ namespace NorthwindBizLayer
 		}
 
 
-//        public ProductCollection GetAllProducts()
-//        {
-//            string str = @"select ProductID, ProductName, SupplierID, CategoryID, 
-//						QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, 
-//						ReorderLevel, Discontinued
-//						from Products";
-//            SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
+		public ProductCollection GetAllProducts()
+		{
+			string str = @"select ProductID, ProductName, SupplierID, CategoryID, 
+						QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, 
+						ReorderLevel, Discontinued
+						from Products";
+			SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
 
-//            ProductCollection cc = new ProductCollection();
-//            DataRead.RunQuery(cmd, new DataRead.ProcessRow(ProductProc), cc);
-//            cc.AcceptChanges();
-//            return cc;
-//        }
+			ProductCollection cc = new ProductCollection();
+			DataRead.RunQuery(cmd, new DataRead.ProcessRow(ProductProc), cc);
+			cc.AcceptChanges();
+			return cc;
+		}
 
-//        public ProductCollection GetProductByProductId(int ProductId)
-//        {
-//            string str = @"select ProductID, ProductName, SupplierID, CategoryID, 
-//						QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, 
-//						ReorderLevel, Discontinued
-//						from Products where ProductId=@ProductId";
-//            SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
-//            cmd.Parameters.Add("@ProductId", SqlDbType.Int, 0, "ProductId");
-//            cmd.Parameters[0].Value = ProductId;
+		public ProductCollection GetProductByProductId(int ProductId)
+		{
+			string str = @"select ProductID, ProductName, SupplierID, CategoryID, 
+						QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, 
+						ReorderLevel, Discontinued
+						from Products where ProductId=@ProductId";
+			SqlCommand cmd = new SqlCommand(str, new SqlConnection(_strCnn));
+			cmd.Parameters.Add("@ProductId", SqlDbType.Int, 0, "ProductId");
+			cmd.Parameters[0].Value = ProductId;
 
-//            ProductCollection cc = new ProductCollection();
-//            DataRead.RunQuery(cmd, new DataRead.ProcessRow(ProductProc), cc);
-//            cc.AcceptChanges();
-//            return cc;
-//        }
+			ProductCollection cc = new ProductCollection();
+			DataRead.RunQuery(cmd, new DataRead.ProcessRow(ProductProc), cc);
+			cc.AcceptChanges();
+			return cc;
+		}
 
 	
 	}
